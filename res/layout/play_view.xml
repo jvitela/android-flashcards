@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:scrollbars="vertical" android:id="@+id/mainLayout" android:orientation="vertical" android:layout_height="fill_parent" android:layout_width="fill_parent">
+	<ViewSwitcher android:id="@+id/frontBackSwitcher" android:layout_margin="10sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@+id/btnSaveAndAddMore">
+		<RelativeLayout android:layout_height="wrap_content" android:id="@+id/frontLayout" android:layout_width="fill_parent" android:background="#ffffff" android:clickable="true" android:onClick="onSwitchView">
+			<LinearLayout android:layout_height="wrap_content" android:id="@+id/frontContent" android:layout_centerInParent="true" android:orientation="vertical" android:layout_width="fill_parent">
+				<TextView android:layout_gravity="center_horizontal" style="@style/cardFrontTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="20sp" android:id="@+id/txtFrontTitle" android:text="@string/lbl_front_title" android:clickable="false"></TextView>
+				<TextView android:layout_gravity="center_horizontal" style="@style/cardFrontDesc" android:layout_height="wrap_content" android:padding="10sp" android:layout_width="wrap_content" android:id="@+id/txtFrontDesc" android:text="@string/lbl_front_desc" android:clickable="false"></TextView>
+			</LinearLayout>
+			<Button android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:text="@string/lbl_flip_card" android:onClick="onSwitchView" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:id="@+id/btnFlip"></Button>
+		</RelativeLayout>
+		<RelativeLayout android:layout_height="wrap_content" android:id="@+id/backLayout" android:layout_width="fill_parent" android:background="#ffffff">
+			<LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/backContent" android:layout_centerInParent="true" android:layout_width="fill_parent">
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="20sp" android:layout_gravity="center_horizontal" style="@style/cardBackTitle" android:id="@+id/txtBackTitle" android:text="@string/lbl_back_title" android:clickable="false"></TextView>
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="10sp" android:layout_gravity="center_horizontal" style="@style/cardBackDesc" android:id="@+id/txtBackDesc" android:text="@string/lbl_back_desc" android:clickable="false"></TextView>
+			</LinearLayout>
+			<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true" android:id="@+id/btnFail" android:onClick="onFail" android:text="@string/lbl_fail"></Button>
+			<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/btnSuccess" android:text="@string/lbl_success" android:onClick="onSuccess" android:layout_alignParentBottom="true" android:layout_alignParentRight="true"></Button>
+		</RelativeLayout>
+	</ViewSwitcher>
+	<LinearLayout android:id="@android:id/empty" android:orientation="vertical" android:layout_margin="20sp" android:layout_height="fill_parent" android:layout_width="fill_parent" android:gravity="center" android:visibility="gone">
+		<TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lbl_play_empty" android:layout_gravity="center_horizontal"></TextView>
+		<Button android:id="@+id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:text="@string/btn_add_cards_to_deck" android:layout_margin="10sp" android:onClick="onAddCards"></Button>
+	</LinearLayout>
+</LinearLayout>

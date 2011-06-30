@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollbars="vertical" android:id="@+id/mainLayout">
+	<ViewSwitcher android:id="@+id/frontBackSwitcher" android:layout_margin="10sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@+id/btnSaveAndAddMore">
+		<RelativeLayout android:layout_height="wrap_content" android:id="@+id/frontLayout" android:layout_width="fill_parent" android:background="#ffffff">
+			<LinearLayout android:layout_height="wrap_content" android:id="@+id/frontContent" android:layout_centerInParent="true" android:orientation="vertical" android:layout_width="fill_parent">
+				<Button android:layout_gravity="center_horizontal" style="@style/cardFrontTitle" android:id="@+id/btnFrontTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="20sp" android:onClick="onEditCardText" android:hint="@string/lbl_front_title"></Button>
+				<Button android:layout_gravity="center_horizontal" style="@style/cardFrontDesc" android:id="@+id/btnFrontDesc" android:layout_height="wrap_content" android:padding="10sp" android:onClick="onEditCardText" android:layout_width="wrap_content" android:hint="@string/lbl_front_desc"></Button>
+			</LinearLayout>
+			<Button android:layout_width="wrap_content" android:id="@+id/btnSwitchFront" android:layout_alignParentBottom="true" android:text="@string/lbl_flip_card" android:onClick="onSwitchView" android:layout_height="wrap_content" android:layout_centerHorizontal="true"></Button>
+			<TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lbl_front" android:layout_alignParentTop="true" android:layout_alignParentLeft="true" android:layout_margin="10sp"></TextView>
+		</RelativeLayout>
+		<RelativeLayout android:layout_height="wrap_content" android:id="@+id/backLayout" android:layout_width="fill_parent" android:background="#ffffff">
+			<LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/backContent" android:layout_centerInParent="true" android:layout_width="fill_parent">
+				<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/btnBackTitle" android:padding="20sp" android:layout_gravity="center_horizontal" style="@style/cardBackTitle" android:onClick="onEditCardText" android:hint="@string/lbl_back_title"></Button>
+				<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/btnBackDesc" android:padding="10sp" android:layout_gravity="center_horizontal" style="@style/cardBackDesc" android:onClick="onEditCardText" android:hint="@string/lbl_back_desc"></Button>
+			</LinearLayout>
+			<Button android:layout_width="wrap_content" android:id="@+id/btnSwitchBack" android:text="@string/lbl_flip_card" android:onClick="onSwitchView" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"></Button>
+			<TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_margin="10sp" android:text="@string/lbl_back"></TextView>
+		</RelativeLayout>
+	</ViewSwitcher>
+	<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:id="@+id/btnSaveAndAddMore" android:text="@string/lbl_save_and_add_more" android:layout_alignParentBottom="true" android:onClick="onAddMoreButton"></Button>
+	<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/btnSave" android:layout_alignParentBottom="true" android:text="@string/lbl_save" android:layout_alignLeft="@+id/frontBackSwitcher" android:onClick="onSaveButton"></Button>
+	<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/btnCancel" android:layout_alignParentBottom="true" android:text="@string/lbl_cancel" android:layout_alignRight="@+id/frontBackSwitcher" android:onClick="onCancelButton"></Button>
+</RelativeLayout>

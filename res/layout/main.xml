@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:padding="10sp">
+	<TextView 
+		android:id="@+id/mnu_title" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:text="@string/app_name">
+	</TextView>
+	<Button 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:text="@string/menu_play" 
+		android:id="@+id/mnu_play" android:onClick="onPlayButton"/>
+	<Button 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:text="@string/menu_cards" 
+		android:id="@+id/mnu_cards" android:onClick="onCardsButton"/>
+	<Button 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:text="@string/menu_decks" 
+		android:id="@+id/mnu_decks" android:onClick="onDecksButton"/>
+	<Button 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:text="@string/menu_import_deck" 
+		android:id="@+id/mnu_import" android:onClick="onImportButton"/>
+</LinearLayout>

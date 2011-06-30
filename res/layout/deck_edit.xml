@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <TextView 
+    	android:layout_height="wrap_content" 
+    	android:layout_width="fill_parent" 
+    	android:layout_alignParentTop="true" 
+    	android:id="@+id/textView1" 
+    	android:textAppearance="?android:attr/textAppearanceMedium" 
+    	android:text="@string/lbl_name" android:layout_marginLeft="20sp" android:layout_marginRight="20sp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/deck_name"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:scrollHorizontally="true"
+        android:gravity="fill_horizontal"
+        android:layout_marginLeft="20sp" android:layout_marginRight="20sp" android:layout_below="@+id/textView1"/>
+    <TextView android:layout_height="wrap_content" android:id="@+id/textView2" android:gravity="left" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/lbl_description" android:layout_below="@+id/deck_name" android:layout_marginLeft="20sp" android:layout_marginRight="20sp"></TextView>
+    <EditText android:layout_height="wrap_content" android:layout_width="fill_parent" android:gravity="fill_horizontal" android:scrollHorizontally="true" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_marginLeft="20sp" android:layout_marginRight="20sp" android:id="@+id/deck_desc" android:layout_below="@+id/textView2"></EditText>
+    <RelativeLayout android:layout_height="wrap_content" android:id="@+id/deck_edit_btns_panel" android:gravity="bottom|center" android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:layout_marginLeft="20sp" android:layout_marginRight="20sp">
+        <Button android:layout_height="wrap_content" android:id="@+id/btnAccept" android:text="@string/lbl_save" android:layout_width="wrap_content" android:paddingLeft="50sp" android:paddingRight="50sp" android:layout_alignParentLeft="true" android:onClick="onSaveButton"></Button>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lbl_cancel" android:id="@+id/btnCancel" android:paddingLeft="50sp" android:paddingRight="50sp" android:layout_alignParentRight="true" android:onClick="onCancelButton"></Button>
+    </RelativeLayout>        
+</RelativeLayout>
