@@ -18,7 +18,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
-public class FlashCardsMSelectListView extends ListActivity {
+public class MultiSelCardsList extends ListActivity {
     private static final int TODECK_ID = Menu.FIRST;
     private static final int DELETE_ID = Menu.FIRST + 1;
 
@@ -26,6 +26,7 @@ public class FlashCardsMSelectListView extends ListActivity {
 
     private FlashCardsDbAdapter mDb;
     private HashSet<Long>		mCheckedIds;
+    private Long				mDeckId;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,8 @@ public class FlashCardsMSelectListView extends ListActivity {
     
     private void fillData() {
         //setContentView(R.layout.list_view); // use default android view
-        Cursor notesCursor = mDb.mCards.fetchAllCards(CardsTable.KEY_FRONT);
+    	QuerySorter sort = new QuerySorter().asc(CardsTable.KEY_FRONT);
+        Cursor notesCursor = mDb.mCards.fetchAllCards(mDeckId,sort.toString());
         startManagingCursor(notesCursor);
         // Now create a simple cursor adapter and set it to display
         SimpleCursorAdapter notes = new SimpleCursorAdapter(

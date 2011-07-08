@@ -52,4 +52,10 @@
 <string name="lbl_import">Import</string>
 <string name="lbl_import_empty">To import a CSV File, place it under the folder &quot;Flashcards&quot; on your SD Card and then select it here.</string>
 <string name="lbl_play">Play</string>
+<string name="lbl_edit_card_confirm">This will terminate the current game. Are you sure?</string>
+<string name="lbl_results">Results</string>
+<string name="lbl_retry">Retry</string>
+<string name="lbl_exit">Exit</string>
+<string name="lbl_successes">Successes: %d</string>
+<string name="lbl_fails">Fails: %d</string>
 </resources>

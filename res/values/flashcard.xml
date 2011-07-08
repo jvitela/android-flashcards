@@ -12,6 +12,7 @@
         <item name="android:background">#ffffff</item>
         <item name="android:textColor">@color/card_text</item>
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textSize">40sp</item>
         <item name="android:padding">10sp</item>
     </style>
 
@@ -25,6 +26,7 @@
         <item name="android:background">#ffffff</item>
         <item name="android:textColor">@color/card_text_back</item>
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textSize">40sp</item>
         <item name="android:padding">10sp</item>
     </style>
 
@@ -38,6 +40,7 @@
         <item name="android:background">#ffffff</item>
         <item name="android:textColor">@color/card_text_empty</item>
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textSize">40sp</item>
         <item name="android:padding">10sp</item>
     </style>
 </resources>

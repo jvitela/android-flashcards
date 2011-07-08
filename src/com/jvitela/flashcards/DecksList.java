@@ -19,7 +19,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
-public class FlashCardsDeckListView extends ListActivity {
+public class DecksList extends ListActivity {
 	// Dialogs
     //private static final int DIALOG_DECK_INFO = 0;
     //private static final int DIALOG_DECK_OPTIONS = 1;
@@ -286,7 +286,7 @@ public class FlashCardsDeckListView extends ListActivity {
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
         mSelectedDeckId = id;
-        Intent intent = new Intent(this,FlashCardsPlay.class);
+        Intent intent = new Intent(this,Play.class);
         intent.putExtra(CardsTable.KEY_DECKID, mSelectedDeckId);
         startActivity(intent);
     }
@@ -343,7 +343,7 @@ public class FlashCardsDeckListView extends ListActivity {
 			alert("Select an item first!");
 			return;
 		}
-		Intent intent = new Intent(this, FlashCardsListView.class);
+		Intent intent = new Intent(this, CardsList.class);
 		intent.putExtra(DecksTable.KEY_DECKID, mSelectedDeckId);
 		startActivity(intent);	
 	}

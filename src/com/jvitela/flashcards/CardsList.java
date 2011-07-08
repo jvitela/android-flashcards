@@ -17,7 +17,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
-public class FlashCardsListView extends ListActivity {
+public class CardsList extends ListActivity {
 	// Activities called for results
     private static final int ACTIVITY_CREATE_CARD	= 0;
     private static final int ACTIVITY_EDIT_CARD		= 1;
@@ -185,7 +185,8 @@ public class FlashCardsListView extends ListActivity {
 
     // Populate list view
     private void fillData() {
-        Cursor notesCursor = mDb.mCards.fetchAllDeckCards(mDeckId,CardsTable.KEY_FRONT);
+    	QuerySorter sort = new QuerySorter().asc(CardsTable.KEY_FRONT);
+        Cursor notesCursor = mDb.mCards.fetchAllCards(mDeckId,sort.toString());
         startManagingCursor(notesCursor);
 
         // Create an array to specify the fields we want to display in the list (only TITLE)
@@ -219,7 +220,7 @@ public class FlashCardsListView extends ListActivity {
     }
 
     private void editMany() {
-        Intent i = new Intent(this, FlashCardsMSelectListView.class);
+        Intent i = new Intent(this, MultiSelCardsList.class);
         startActivity(i);    	
     }
 

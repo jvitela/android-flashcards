@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="fill_parent" android:id="@+id/relativeLayout1" android:layout_width="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ffffff">
+    <TextView android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_width="wrap_content" android:textColor="#38761d" android:textStyle="bold" android:textSize="50sp" android:layout_margin="10sp" android:id="@+id/txtTitle" android:text="@string/lbl_results"></TextView>
+    <LinearLayout android:orientation="vertical" android:id="@+id/graphicContainer" android:layout_below="@+id/txtTitle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@+id/btnRetry" android:gravity="center">
+        <com.jvitela.flashcards.PieChartView 
+        	android:layout_height="wrap_content" 
+        	android:layout_width="wrap_content" 
+        	android:id="@+id/pieChart"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtSuccesses" android:textSize="20sp" android:textColor="#6aa84f" android:text="@string/lbl_successes"></TextView>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtFails" android:textSize="20sp" android:textColor="#e06666" android:text="@string/lbl_fails"></TextView>
+    </LinearLayout>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/btnRetry" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true" android:text="@string/lbl_retry"></Button>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentRight="true" android:id="@+id/btnExit" android:text="@string/lbl_exit"></Button>
+</RelativeLayout>

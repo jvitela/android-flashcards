@@ -2,14 +2,14 @@ package com.jvitela.flashcards;
 
 import android.database.Cursor;
 
-public class FlashCardInfo {
+public class CardInfo {
 	public int		mId;
 	public String	mFront;
 	public String	mBack;
 	public int		mDeckId;
 	public int		mRating;
 
-	public FlashCardInfo(Cursor card,boolean reverse) {
+	public CardInfo(Cursor card,boolean reverse) {
         int iid		= card.getColumnIndexOrThrow(CardsTable.KEY_ROWID);
         int ifront	= card.getColumnIndexOrThrow(CardsTable.KEY_FRONT);
         int iback	= card.getColumnIndexOrThrow(CardsTable.KEY_BACK);
@@ -28,7 +28,7 @@ public class FlashCardInfo {
 		mRating	= card.getInt(irating);
 	}
 
-	public FlashCardInfo(String front, String back) {
+	public CardInfo(String front, String back) {
 		mFront = front;
 		mBack = back;
 	}

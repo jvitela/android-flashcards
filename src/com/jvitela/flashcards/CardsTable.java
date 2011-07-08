@@ -84,7 +84,7 @@ public class CardsTable {
      * Return a Cursor over the list of all cards in the database
      * 
      * @return Cursor over all cards
-     */
+     *
     public Cursor fetchAllCards(String sort) {
     	String[] fields = new String[] {
     			CardsTable.KEY_ROWID,
@@ -104,14 +104,14 @@ public class CardsTable {
     		null, 				// having
     		sort+" asc"			// order by
         );
-    }
+    }*/
 
     /**
      * Return a Cursor over the list of all cards belonging to one deck in the database
      * 
      * @return Cursor over all cards
      */
-    public Cursor fetchAllDeckCards(long deckId, String sort) {
+    public Cursor fetchAllCards(long deckId, String sort) {
     	String[] fields = new String[] {
     			CardsTable.KEY_ROWID,
     			CardsTable.KEY_FRONT, 
@@ -126,10 +126,10 @@ public class CardsTable {
     		fields, 				// columns
     		// selection
     		CardsTable.KEY_DECKID+"="+deckId,
-    		null, 					// selection Args
+    		null, 					// selection Arguments
     		null, 					// group by
     		null, 					// having
-    		sort+" asc"		// order by
+    		sort					// order by
         );
     }
 

@@ -5,7 +5,7 @@
       android:versionName="1.0">
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
     <application android:icon="@drawable/icon" android:debuggable="true" android:label="@string/app_name">
-		<activity android:name=".FlashCardsDeckListView" android:label="@string/app_name">
+		<activity android:name="DecksList" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -13,12 +13,13 @@
 		</activity>
         <activity android:name=".FlashCards">
         </activity>		
-		<activity android:name=".FlashCardsListView" android:label="@string/app_name"></activity>
+		<activity android:label="@string/app_name" android:name=".CardsList"></activity>
 		<activity android:name=".CardEdit" android:label="@string/app_name"></activity>
-		<activity android:label="@string/app_name" android:name=".FlashCardsPlay"></activity>
-		<activity android:name=".FlashCardsMSelectListView"></activity>
+		<activity android:label="@string/app_name" android:name=".Play"></activity>
+		<activity android:name=".MultiSelCardsList"></activity>
 		<activity android:name=".DeckEdit"></activity>
 		<activity android:name=".Import" android:label="@string/lbl_import"></activity>
+		<activity android:name=".Results"></activity>
 	</application>
 	<uses-sdk android:minSdkVersion="7"></uses-sdk>
 </manifest> 
