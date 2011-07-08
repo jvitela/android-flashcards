@@ -4,7 +4,9 @@ A Flashcards application to exercise the mental process of active recall, uses s
 
 About
 -----
-*Author*: Jonathan Vitela
+Author: Jonathan Vitela
+[UI Design] (https://docs.google.com/drawings/d/1FDPXHdlyQiKCb6OhT8oyna1gquXeRIgnvviyatjBGgI/edit?hl=en_US)
+[Database Design] (https://docs.google.com/drawings/d/1FdVCj5VFU9lOjZ7T_hWoW17YiFf8GMq3yJqVNVG6xaM/edit?hl=en_US)
 
 To Do
 -----
